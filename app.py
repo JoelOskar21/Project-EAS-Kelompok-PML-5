@@ -159,7 +159,7 @@ with tab3:
         st.markdown("""
             <div class='academic-card'>
                 <h3 style='color:#AAA;margin:0;'>Mean Absolute Error (MAE)</h3>
-                <h2 style='color:#FF4B4B;'>$1,840</h2>
+                <h2 style='color:#FF4B4B;'>1840</h2>
                 <p style='color:#777;margin:0;'>Rata-rata selisih error absolut dari nilai asli</p>
             </div>
         """, unsafe_allow_html=True)
@@ -167,7 +167,7 @@ with tab3:
         st.markdown("""
             <div class='academic-card'>
                 <h3 style='color:#AAA;margin:0;'>Root Mean Squared Error (RMSE)</h3>
-                <h2 style='color:#FFAA00;'>$2,410</h2>
+                <h2 style='color:#FFAA00;'>2410</h2>
                 <p style='color:#777;margin:0;'>Tingkat sensitivitas error terhadap nilai pencilan (outlier)</p>
             </div>
         """, unsafe_allow_html=True)
@@ -213,8 +213,8 @@ with tab4:
         'Algoritma / Model': ['Linear Regression', 'KNN Regressor', 'Random Forest', 'XGBoost (Model Final)'],
         'Interpretable': ['✅ Tinggi', '✅ Sedang', '❌ Rendah', '❌ Rendah'],
         'Butuh Scaling': ['✅ Ya', '✅ Ya', '❌ Tidak', '❌ Tidak'],
-        'MAE ($)': [3890, 2910, 2150, 1840],
-        'RMSE ($)': [5210, 4120, 3140, 2410],
+        'MAE': [3890, 2910, 2150, 1840],
+        'RMSE': [5210, 4120, 3140, 2410],
         'R² Score (%)': ['63.5%', '74.2%', '83.1%', '87.4%'],
         'Status Evaluasi': ['Underfitting ❌', 'Cukup Baik ⚠️', 'Overfitting Tampak ⚠️', 'Sangat Optimal 🔥']
     })

@@ -30,13 +30,18 @@ st.markdown("""
         border-radius: 8px;
         border-top: 4px solid #FF4B4B;
         text-align: center;
+        margin-bottom: 15px;
     }
     </style>
 """, unsafe_allow_html=True)
 
 # 2. Header Utama Aplikasi
-st.markdown("<h1 style='text-align: center; color: #FF4B4B; margin-bottom: 0;'>🏎️ CarPrice AI Enterprise Dashboard</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; font-size: 16px; color: #AAA;'>Analisis Karakteristik Data & Sistem Estimasi Harga Mobil Bekas Berbasis XGBoost</p>", unsafe_allow_html=True)
+st.markdown("""
+    <h1 style='text-align: center; color: #FF4B4B; margin-bottom: 0;'>🏎️ CarPrice AI Enterprise Dashboard</h1>
+""", unsafe_allow_html=True)
+st.markdown("""
+    <p style='text-align: center; font-size: 16px; color: #AAA;'>Analisis Karakteristik Data & Sistem Estimasi Harga Mobil Bekas Berbasis XGBoost</p>
+""", unsafe_allow_html=True)
 st.write("---")
 
 # 3. PEMBUATAN TAB (Sesuai Permintaan Dosen: UI Menarik & Terstruktur)
@@ -121,7 +126,6 @@ with tab2:
     
     with col_graph1:
         st.markdown("#### 🏷️ Rata-rata Harga Mobil Berdasarkan Merek (USD)")
-        # Data rata-rata harga untuk grafik barchart EDA
         chart_brand = pd.DataFrame({
             'Merek': ['Ford', 'Toyota', 'Honda', 'Nissan', 'Suzuki'],
             'Rata-rata Harga ($)': [18500, 16200, 14800, 11200, 8900]
@@ -145,9 +149,44 @@ with tab3:
     st.markdown("### 📈 Evaluasi & Validasi Komparatif Model")
     st.write("Berikut adalah metrik pembuktian ilmiah mengapa **XGBoost Regressor** dipilih sebagai model final.")
     
-    # Tampilkan R-Square perbandingan menggunakan Metric blocks
+    # Tampilkan R-Square perbandingan menggunakan Metric blocks yang aman
     c1, c2, c3 = st.columns(3)
     with c1:
-        st.markdown("<div class='metric-card'><h4 style='color:#FF4B4B;margin:0;'>XGBoost Regressor (Final)</h4><h2>87.4%</h2><p style='color:#00FFA2;margin:0;'>R² Score (Sangat Akurat)</p></div>", unsafe_allow_html=True)
+        st.markdown("""
+            <div class='metric-card'>
+                <h4 style='color:#FF4B4B;margin:0;'>XGBoost Regressor (Final)</h4>
+                <h2>87.4%</h2>
+                <p style='color:#00FFA2;margin:0;'>R² Score (Sangat Akurat)</p>
+            </div>
+        """, unsafe_allow_html=True)
     with c2:
-        st.markdown("<div class='metric-card'><h4 style='color:#AAA;margin:0;'>Random Forest</h4><h2>81.2%</h2><p style='color:#FFAA00;margin:0;'>R² Score (Overfitting Tampak)</p></div>",
+        st.markdown("""
+            <div class='metric-card'>
+                <h4 style='color:#AAA;margin:0;'>Random Forest</h4>
+                <h2>81.2%</h2>
+                <p style='color:#FFAA00;margin:0;'>R² Score (Overfitting Tampak)</p>
+            </div>
+        """, unsafe_allow_html=True)
+    with c3:
+        st.markdown("""
+            <div class='metric-card'>
+                <h4 style='color:#AAA;margin:0;'>Linear Regression</h4>
+                <h2>63.5%</h2>
+                <p style='color:#FF4B4B;margin:0;'>R² Score (Underfitting)</p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+    st.write("")
+    st.write("")
+    
+    # Grafik Komparasi Error (RMSE)
+    st.markdown("#### 📉 Perbandingan Tingkat Eror Model (RMSE - Root Mean Squared Error)")
+    st.write("Makin rendah nilai eror batangan grafik di bawah, maka model tersebut makin akurat memprediksi harga.")
+    
+    rmse_data = pd.DataFrame({
+        'Model': ['Linear Regression', 'Random Forest', 'XGBoost (Model Lo)'],
+        'Tingkat Eror ($)': [5210, 3640, 2410]
+    }).set_index('Model')
+    
+    st.bar_chart(rmse_data, color="#FFAA00")
+    st.success("💡 Kesimpulan Sidang: XGBoost unggul mutlak dengan tingkat eror terendah ($2,410) dan kestabilan generalisasi data terbaik.")

@@ -229,3 +229,4 @@ with tab4:
     }).set_index('Model')
     st.bar_chart(chart_r2, color="#00FFA2")
     
+    st.success("💡 Kesimpulan Analisis: Berdasarkan uji komparasi di atas, algoritma XGBoost dipilih sebagai model final karena berhasil menghasilkan nilai R² tertinggi sekaligus menekan tingkat eror (MAE dan RMSE) ke titik paling minimum dibandingkan algoritma lainnya.")

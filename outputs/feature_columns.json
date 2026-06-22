@@ -1,0 +1,23 @@
+[
+  "brand_encoded",
+  "year",
+  "odometer",
+  "cond_encoded",
+  "car_age",
+  "cylinders_10 cylinders",
+  "cylinders_12 cylinders",
+  "cylinders_3 cylinders",
+  "cylinders_4 cylinders",
+  "cylinders_5 cylinders",
+  "cylinders_6 cylinders",
+  "cylinders_8 cylinders",
+  "cylinders_other",
+  "fuel_diesel",
+  "fuel_electric",
+  "fuel_gas",
+  "fuel_hybrid",
+  "fuel_other",
+  "transmission_automatic",
+  "transmission_manual",
+  "transmission_other"
+]

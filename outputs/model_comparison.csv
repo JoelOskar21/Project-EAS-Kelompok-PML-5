@@ -1,0 +1,5 @@
+model,MAE,RMSE,R2,MAPE,training_time_sec,Rank
+XGBoost,3769.46,6195.31,0.8099,50.0,77.24,1
+KNN Regressor,3609.96,6420.05,0.7959,49.62,0.17,2
+Random Forest,4302.75,6679.84,0.779,56.09,8.01,3
+Linear Regression,6436.02,8893.07,0.6084,78.85,0.22,4

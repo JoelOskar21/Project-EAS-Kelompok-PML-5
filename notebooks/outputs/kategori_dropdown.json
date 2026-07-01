@@ -1,0 +1,24 @@
+{
+  "cylinders": [
+    "10 cylinders",
+    "12 cylinders",
+    "3 cylinders",
+    "4 cylinders",
+    "5 cylinders",
+    "6 cylinders",
+    "8 cylinders",
+    "other"
+  ],
+  "fuel": [
+    "diesel",
+    "electric",
+    "gas",
+    "hybrid",
+    "other"
+  ],
+  "transmission": [
+    "automatic",
+    "manual",
+    "other"
+  ]
+}

@@ -1,0 +1,22 @@
+fitur,importance
+fuel_diesel,0.2699824
+cylinders_12 cylinders,0.110859096
+year,0.0860186
+cylinders_4 cylinders,0.06761118
+car_age,0.059750397
+cylinders_8 cylinders,0.055783954
+cylinders_10 cylinders,0.040747814
+cylinders_3 cylinders,0.038550243
+cylinders_6 cylinders,0.035333354
+fuel_other,0.032335173
+fuel_hybrid,0.029122163
+odometer,0.028878188
+fuel_electric,0.028632315
+transmission_other,0.027792014
+brand_encoded,0.02242133
+transmission_automatic,0.01403302
+fuel_gas,0.013919338
+cylinders_5 cylinders,0.012875074
+cond_encoded,0.009244781
+transmission_manual,0.008912502
+cylinders_other,0.007197082

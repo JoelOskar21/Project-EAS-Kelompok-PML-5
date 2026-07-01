@@ -14,7 +14,7 @@ st.set_page_config(
     layout="wide"
 )
 
-OUTPUT_DIR = "outputs"
+OUTPUT_DIR = "notebooks/outputs"
 
 
 # ============================================================
